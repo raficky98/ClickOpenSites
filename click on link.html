@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+align: center;
+width : 15em;
+height: 10em;
+background-color : blue;
+border-style: groove;
+border-width:10px;
+border-color:red;
+}
+li {
+background-color : lightblue;
+text-align:center;
+font-size: 20px;
+margin : 20px;
+text-shadow: 5px 5px 5px red;
+}
+</style>
+</head>
+<body>
+<ul id="sites">
+<li url="http://google.com">Google</li>
+<li url="http://yahoo.com">Yahoo</li>
+<li url="http://facebook.com">Facebook</li>
+</ul>
+<script>
+function newDoc(e) {
+/*	//var a = document.getElementsByTagName("li");
+	for (var i = 0; i < a.length; i++) {
+	  var d = a[i].getAttribute("url");
+		if (e.target == a[i]) {
+		window.location.assign(d);
+		}
+	}
+  }                      */
+//var d = e.target.getAttribute("url");
+window.location.assign(e.target.getAttribute("url"));
+		}
+document.getElementById("sites").addEventListener("click", newDoc, false);
+</script>
+</body>
+</html> 
